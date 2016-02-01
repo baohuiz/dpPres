@@ -1,0 +1,58 @@
+---
+title       : Predict weight based on height
+subtitle    : A simplified use case to illustrate how to use slidify
+author      : baohuiz
+job         : statistician
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## A Web Application to Predict Your Weight
+
+<iframe src='https://baohuiz.shinyapps.io/shinyapp/' width="500" height="300"></iframe>
+
+--- .class #id 
+
+## The regression model
+
+The model weight ~ height is a simplified regression model just for illustration purpose:
+
+
+```
+   weightByHeightModel <- function(height) 40 + 1.6 * height
+```
+
+---
+
+## Let's look at some examples
+
+If I am 60 inches tall:
+
+
+```r
+   weightByHeightModel <- function(height) 40 + 1.6 * height
+   height1 <- 60
+   weight1 <- weightByHeightModel(height1)
+```
+So I am 136 lbs. 
+
+If I am 70 inches tall:
+
+```r
+   weightByHeightModel <- function(height) 40 + 1.6 * height
+   height2 <- 70
+   weight2 <- weightByHeightModel(height2)
+```
+So I am 152 lbs.
+
+---
+
+## Conclusions:
+
+1. Obviously, the prediction function for weight based on height should be more sophisticated than presented here
+2. For more accurate prediction, it may need to consider our varibles such as gender, age, race, etc.
+3. But solidify is so impressive for building a data product.

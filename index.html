@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predict weight based on height</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Predict weight based on height">
+  <meta name="author" content="baohuiz">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Predict weight based on height</h1>
+    <h2>A simplified use case to illustrate how to use slidify</h2>
+    <p>baohuiz<br/>statistician</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>A Web Application to Predict Your Weight</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src='https://baohuiz.shinyapps.io/shinyapp/' width="500" height="300"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The regression model</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The model weight ~ height is a simplified regression model just for illustration purpose:</p>
+
+<pre><code>   weightByHeightModel &lt;- function(height) 40 + 1.6 * height
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s look at some examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>If I am 60 inches tall:</p>
+
+<pre><code class="r">   weightByHeightModel &lt;- function(height) 40 + 1.6 * height
+   height1 &lt;- 60
+   weight1 &lt;- weightByHeightModel(height1)
+</code></pre>
+
+<p>So I am 136 lbs. </p>
+
+<p>If I am 70 inches tall:</p>
+
+<pre><code class="r">   weightByHeightModel &lt;- function(height) 40 + 1.6 * height
+   height2 &lt;- 70
+   weight2 &lt;- weightByHeightModel(height2)
+</code></pre>
+
+<p>So I am 152 lbs.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Conclusions:</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Obviously, the prediction function for weight based on height should be more sophisticated than presented here</li>
+<li>For more accurate prediction, it may need to consider our varibles such as gender, age, race, etc.</li>
+<li>But solidify is so impressive for building a data product.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='A Web Application to Predict Your Weight'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The regression model'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Let&#39;s look at some examples'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusions:'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
